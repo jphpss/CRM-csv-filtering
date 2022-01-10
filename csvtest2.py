@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # The above line specifies path to your python executable.
 # Refines CRM csv file search criterion, for the purpose of selective targetting for sales pipeline 'reach' initiatives
-# Written by Jyri Hamalainen, (with help from Ari Hamalainen), https://thehub.io/startups/100ximpact
+# Written by Jyri Hamalainen, https://thehub.io/startups/100ximpact
 import os
 import csv
 import sys
