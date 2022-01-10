@@ -34,7 +34,13 @@ with open(PATH, newline='') as f:
             print('FIELDS contains an incorrect field name')
             sys.exit(1)
 
+        # write the filtered headers
         writer.writeheader()
+
+        # writes row match, if it finds STRING in reader csv of filtered FIELDS - and joins row data values with ','
+        # take values out of each reader object row, convert to a lowercase list, join with delimiter ','
+        #apply IF condition (based on search string criterion), to the result of joined list , so if match found, then write that row
+        
         for d in reader:
             if STRING.lower() in ','.join(list(d.values())).lower():
                 writer.writerow(d)
