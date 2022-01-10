@@ -9,7 +9,9 @@ import sys
 # path to source file
 PATH = 'output.csv'
 # case-insensitive string to search for
-STRING = 'German'
+STRING=input ("Enter the Search Field? ")
+
+# STRING = 'German'
 # list of fieldnames to output (empty [] for all fields)
 FIELDS = ['Company name', 'Lifecycle Stage', 'Last Contacted', 'Company owner', 'LinkedIn Bio']
 # output file
@@ -37,9 +39,9 @@ with open(PATH, newline='') as f:
         # write the filtered headers
         writer.writeheader()
 
-        # writes row match, if it finds STRING in reader csv of filtered FIELDS - and joins row data values with ','
-        # take values out of each reader object row, convert to a lowercase list, join with delimiter ','
-        #apply IF condition (based on search string criterion), to the result of joined list , so if match found, then write that row
+        # Writes row match, if it finds STRING in reader csv of filtered FIELDS - and joins row data values with ','...detail:
+        # takes values out of each reader object row, convert to a lowercase list, join with delimiter ','
+        # apply IF condition (based on search string criterion), to the result of joined list , so if match found, then write that row
         
         for d in reader:
             if STRING.lower() in ','.join(list(d.values())).lower():
